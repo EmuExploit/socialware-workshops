@@ -15,4 +15,4 @@ _start:
 
 section .data
 	msg db "Hello, World!", 0xa ; our message string, plus a 0xa (newline character)
-	len equ $ - msg
+	msglen equ $ - msg
