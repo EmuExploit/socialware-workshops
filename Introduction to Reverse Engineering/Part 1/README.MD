@@ -1,7 +1,7 @@
 # Intro to Reverse Engineering: Part 1
-## What's in this repo?
+## What's in this folder?
 
-In this repo we have the files distributed for the 0x02 workshop, accompanying slides can be found at the [Perth Socialware Archive](https://emu.team/perth-socialware-archive/)
+In this folder we have the files distributed for the 0x02 workshop, accompanying slides can be found at the [Perth Socialware Archive](https://emu.team/perth-socialware-archive/)
 
 ## Some resources to learn more about assembly
 - [the-hub-of-heliopolis: Getting Started with x86-64 Assembly on Linux](https://p403n1x87.github.io/getting-started-with-x86-64-assembly-on-linux.html)
