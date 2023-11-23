@@ -1,7 +1,7 @@
 # Workshop @ Australian Information Security Association (AISA) PerthSEC Conference 2024
 https://aisasecuritydays.com.au/perthsec-workshop
 
-- Slides available: <to be uploaded>
+- Slides available: (to be uploaded)
 - Directory of inclusive resources & tooling `.`
 
 **NOTE:
