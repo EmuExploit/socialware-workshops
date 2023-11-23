@@ -3,7 +3,7 @@
 
 void decrypt(char* s, /* FIX ME*/) {
 	for (int i = 0; /*FIX ME!! */; i ++) {
-		s[i] += key;
+		s[i] -= key;
 	}
 }
 
