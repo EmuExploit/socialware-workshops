@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-void encrypt(char* s, /* FIX ME*/) {
+void decrypt(char* s, /* FIX ME*/) {
 	for (int i = 0; /*FIX ME!! */; i ++) {
 		s[i] += key;
 	}
@@ -9,8 +9,8 @@ void encrypt(char* s, /* FIX ME*/) {
 
 
 int main(void) {
-	char plaintext[] = "EMUEXPLOIT";
+	char plaintext[] = "RZbRe]Y\\Va";
 	
-	encrypt(plaintext,13);
+	decrypt(plaintext,13);
 	//FIX ME!!
 }
