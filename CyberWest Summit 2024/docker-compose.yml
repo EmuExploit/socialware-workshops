@@ -1,0 +1,58 @@
+version: 'silly'
+
+networks:
+  network:
+    name: demo_network
+
+    ipam:
+      config:
+        - subnet: 172.69.0.0/24
+
+services:
+  lab:
+    container_name: demo_lab
+    hostname: demo
+
+    build:
+      context: ./lab
+      dockerfile: Dockerfile
+
+    ports:
+      - "22:22"
+      - "80:80"
+      - "3306:3306"
+      - "7773:7773"
+
+    extra_hosts:
+       - "securesales:172.69.0.4"
+       - "securesales.com:172.69.0.4"
+       - "attacker:172.69.0.20"
+       - "attacker.com:172.69.0.20"
+
+    networks:
+      network:
+        ipv4_address: 172.69.0.4
+
+  hack:
+    container_name: demo_hack
+    hostname: attacker
+
+    build:
+      context: ./hack
+      dockerfile: Dockerfile
+
+    ports:
+      - "2222:2222"
+      - "1337:1337"
+      - "4444:4444"
+      - "9001:9001"
+
+    extra_hosts:
+       - "securesales:172.69.0.4"
+       - "securesales.com:172.69.0.4"
+       - "attacker:172.69.0.20"
+       - "attacker.com:172.69.0.20"
+
+    networks:
+      network:
+        ipv4_address: 172.69.0.20

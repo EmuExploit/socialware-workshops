@@ -1,0 +1,3 @@
+# to do:
+- fix brians sync script
+- look check if we have candidates for internal job board /careers (also change default pw)
