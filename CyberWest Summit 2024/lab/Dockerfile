@@ -42,7 +42,7 @@ RUN chmod 0755 /var/run/sshd
 COPY ./config/ssh.conf /etc/ssh/sshd_config
 
 # bd
-COPY ./src/bd/notxz.py /tmp/notxz.py
+COPY ./src/bd/notxz.sh /tmp/notxz.sh
 
 RUN mkdir -p /root/.ssh/
 COPY ./src/ssh/root-id_rsa /root/.ssh/id_rsa
