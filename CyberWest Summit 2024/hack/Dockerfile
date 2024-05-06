@@ -29,7 +29,7 @@ COPY ./config/motd /etc/motd
 COPY ./config/profile /root/.bashrc
 COPY ./config/payloads /root/.bash_history
 
-RUN apt-get install -y vim nmap curl mariadb-client ncat tmux
+RUN apt-get install -y vim nmap curl mariadb-client ncat tmux hashcat
 
 RUN mkdir /pwn
 COPY ./src/ /pwn

